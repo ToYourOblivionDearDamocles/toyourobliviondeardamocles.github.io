@@ -24,8 +24,8 @@ aside
   display: block!important
   position: fixed
   overflow: auto
-  background: darken($dark, 2%)
-  color: #fff
+  background: $inverse-surface
+  color: $inverse-on-surface
   padding: 2.25em
   width: 12em
   top: 0
@@ -44,7 +44,7 @@ nav a
   padding: .5em 2.25em
 
 nav a:hover, nav a.selected
-  background: lighten($dark, 2%)
+  background: rgba($inverse-on-surface, .08)
   text-decoration: inherit
 
 .icon

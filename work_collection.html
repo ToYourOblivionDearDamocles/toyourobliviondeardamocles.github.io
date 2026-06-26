@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Work Collection"
+permalink: "/works/"
+---
+
+<article>
+  <header><h1>Work Collection</h1></header>
+
+  <p>
+    This part contains the visualization and presentation
+    of my work and interests.
+  </p>
+
+  {% assign works = site.works | sort: "date" | reverse %}
+  {% if works.size > 0 %}
+  <ul class="archive">
+    {% for work in works %}
+    <li>
+      {% if work.date %}
+      <time datetime="{{ work.date | date_to_xmlschema }}">{{ work.date | date: "%Y-%m-%d" }}</time>
+      {% endif %}
+      <a href="{{ work.url | relative_url }}">{{ work.title }}</a>
+      {% if work.summary %}
+      <p>{{ work.summary }}</p>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No work items yet.</p>
+  {% endif %}
+</article>

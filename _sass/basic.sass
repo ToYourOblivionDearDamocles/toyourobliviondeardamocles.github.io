@@ -1,6 +1,6 @@
 body
-  background: $light
-  color: $dark
+  background: $color-bg
+  color: $color-text
   font-family: $font-family
   font-weight: $font-weight
   font-size: $font-size
@@ -11,13 +11,11 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-@media (prefers-color-scheme: dark)
-  body
-    background: $dark
-    color: $light
-
 h1, h2, h3, h4, h5, h6
+  font-family: $heading-family
   font-weight: $heading-weight
+  line-height: 1.25
+  color: $color-text
 
 b, strong, th
   font-weight: $font-weight + 200
@@ -27,28 +25,30 @@ p
 
 a
   color: $link-color
-  text-decoration: inherit
+  text-decoration: none
   &:hover
     text-decoration: underline
 
-header a, footer a, aside a
+aside a
   color: inherit
 
 header time
-  color: reduce(100)
+  color: $color-text-muted
 
 hr
-  border: 1px solid reduce(30)
+  border: 0
+  border-top: 1px solid $color-border-muted
   margin: 2em 0
 
 article:not(:last-of-type)
-  border-bottom: 1px solid reduce(14)
+  border-bottom: 1px solid $color-border-muted
 
 blockquote
-  background: reduce(6)
-  border-left: 3px solid reduce(90)
-  padding: 1px 1.5em
-  opacity: .75
+  background: $surface-container-low
+  border-left: 2px solid $outline
+  color: $color-text-muted
+  padding: .75em 1em
+  opacity: 1
 
 blockquote, figure
   margin: 1em 0
@@ -60,7 +60,6 @@ li
   margin: .25em 0
 
 img
-  border-radius: 2px
   max-width: 100%
   height: auto
 
@@ -69,19 +68,19 @@ table
   max-width: 100%
   overflow-y: scroll
   border-spacing: 1px
-  border-radius: 2px
-  box-shadow: 0 0 0 1px reduce(12) inset
+  border-top: 1px solid $color-border
+  border-bottom: 1px solid $color-border
 
 th, td
   padding: .5em 1em
-  box-shadow: 0 0 0 1px reduce(12)
+  border-bottom: 1px solid $color-border-muted
 
 tr:hover, tr:nth-child(odd) td
-  background: reduce(4)
+  background: $surface-container-low
 
 pre
-  background: reduce(12)
-  border-radius: 2px
+  background: $surface-container-low
+  border: 1px solid $color-border-muted
   font-size: .8em
   margin: 1.5em 0
   padding: .8em 1.2em
@@ -89,8 +88,9 @@ pre
 
 \:not(pre) > code
   font-size: .9em
-  background: reduce(15)
-  opacity: .7
-  border-radius: 2px
+  background: $surface-container-low
+  color: $color-text
+  opacity: 1
+  border: 1px solid $color-border-muted
   margin: 0 .1em
   padding: .2em .4em

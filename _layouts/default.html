@@ -15,7 +15,7 @@
 {% if page.mathjax or site.mathjax %}
 <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
 <script defer src="{{ "/assets/katex/katex.min.js" | relative_url }}"></script>
-<script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload="renderMathInElement(document.body)"></script>
+<script defer src="{{ "/assets/katex/contrib/auto-render.min.js" | relative_url }}" onload='renderMathInElement(document.body, {delimiters: [{left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}, {left: "\\(", right: "\\)", display: false}, {left: "\\[", right: "\\]", display: true}, {left: "\\begin{equation}", right: "\\end{equation}", display: true}, {left: "\\begin{align}", right: "\\end{align}", display: true}, {left: "\\begin{alignat}", right: "\\end{alignat}", display: true}, {left: "\\begin{gather}", right: "\\end{gather}", display: true}], throwOnError: false})'></script>
 {% endif %}
 {% if site.comments.disqus_shortname and page.layout == "post" %}<script src="//{{ site.comments.disqus_shortname }}.disqus.com/embed.js" async></script>{% endif %}
 {% if site.comments.isso_domain and page.layout == "post" %}<script data-isso="http://{{ site.comments.isso_domain }}" src="//{{ site.comments.isso_domain }}/js/embed.min.js"></script>{% endif %}

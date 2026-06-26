@@ -1,28 +1,47 @@
 .title
   font-size: 1.25em
+  font-family: $heading-family
+  font-weight: 500
 
 .more
   margin: 2em 0 1em
 
 .more a
-  border-radius: 2px
-  border: 1.5px solid $link-color
-  padding: .4em .8em
-  transition: .2s background, .2s color
+  background: transparent
+  border: 1px solid $color-border
+  color: $button-text
+  display: inline-block
+  font-weight: 600
+  padding: .45em .8em
+  transition: .2s background, .2s border-color, .2s color
 
 .more a:hover
-  color: #fff
-  background: $link-color
+  color: $color-text-on-emphasis
+  background: $color-primary
+  border-color: $color-primary
   text-decoration: inherit
 
 .archive
-  font-size: 1.1em
+  font-size: 1em
+  list-style: none
+  padding-left: 0
+
+.archive li
+  border: 1px solid $color-border
+  background: $surface-container-lowest
+  margin: .75em 0
+  padding: .85em 1em
+
+.archive li p
+  color: $color-text-muted
+  margin: .45em 0 0
 
 .archive time
   display: inline-block
   min-width: 10ch
   min-height: 1.75em
   margin: 0 .2em
+  color: $color-text-muted
 
 .icon
   height: 1em
@@ -33,7 +52,7 @@
   margin-bottom: .15em
 
 a:hover .icon
-  color: reduce(100)
+  color: $color-text-muted
 
 .full table
   display: table
@@ -57,8 +76,8 @@ a:hover .icon
 
 .highlight // https://github.com/richleland/pygments-css/blob/master/monokai.css <http://unlicense.org>
   pre
-    background: rgba(lighten($dark, 6%), 0.9)
-    color: white
+    background: $color-text
+    color: $color-text-on-emphasis
   .c
     color: #a29f90
   .err
@@ -138,3 +157,65 @@ a:hover .icon
     color: #f92672
   .gi
     color: #a6e22e
+
+.card,
+.project-card,
+.repo-panel
+  background: $surface-container-lowest
+  border: 1px solid $color-border
+  padding: 1em
+
+.section-muted,
+.hero,
+.code-preview
+  background: $surface-container-low
+  border: 1px solid $color-border-muted
+  padding: 1em
+
+.button-primary,
+.button-secondary
+  display: inline-block
+  font-weight: 600
+  line-height: 1.2
+  padding: .45em .8em
+  text-decoration: none
+  transition: .2s background, .2s border-color
+
+.button-primary
+  background: $color-primary
+  color: $color-text-on-emphasis
+  border: 1px solid $color-primary
+
+.button-primary:hover
+  background: $color-primary-hover
+  color: $color-text-on-emphasis
+  text-decoration: none
+
+.button-primary:active
+  background: $color-primary-active
+
+.button-secondary
+  background: transparent
+  color: $button-text
+  border: 1px solid $color-border
+
+.button-secondary:hover
+  background: $color-primary
+  border-color: $color-primary
+  color: $color-text-on-emphasis
+  text-decoration: none
+
+.button-secondary:active
+  background: $button-bg-active
+
+.text-muted
+  color: $color-text-muted
+
+.tag
+  background: $surface-container-lowest
+  color: $color-text-muted
+  border: 1px solid $color-accent-muted-border
+  display: inline-block
+  font-size: .85em
+  line-height: 1.4
+  padding: 2px 8px

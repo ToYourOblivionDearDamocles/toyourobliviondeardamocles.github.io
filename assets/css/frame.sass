@@ -4,22 +4,28 @@
 @import index, font, basic, layout, classes
 
 html
-  background: lighten($dark, 70%)
+  background: $surface-dim
   padding: 0 calc(38% - 22em)
 
 body
-  box-shadow: 0 0 .3em lighten($dark, 65%)
+  border-left: 1px solid $color-border
+  border-right: 1px solid $color-border
 
 body > header, body > footer
-  background: lighten($dark, 5%)
-  color: $light
+  background: $surface-container-low
+  color: $color-text
+
+body > header
+  border-bottom: 1px solid $color-border
+
+body > footer
+  border-top: 1px solid $color-border
 
 @media (min-width: 32em)
   body > header, body > article, body > footer
     padding: 1.75em calc(22% - 6em)
 
-@media (prefers-color-scheme: dark)
-  body, body > header, body > footer
-    box-shadow: 0 0 0 1px lighten($dark, 8%)
-  html, body > header, body > footer
-    background: $dark
+nav a.selected
+  color: $color-text
+  font-weight: 600
+  border-bottom-color: $color-text
