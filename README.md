@@ -6,7 +6,7 @@ permalink: "/about/"
 
 ## Taorui Wang
 
-I obtained my Mathematical Sciences Ph.D. at Worcester Polytechnic Institute, focusing on the intersection of machine learning and scientific computing. My research focused on neural-network methods for high-dimensional PDEs and stochastic optimization.
+I obtained my Mathematical Sciences Ph.D. at Worcester Polytechnic Institute, focusing on neural-network methods for high-dimensional PDEs and stochastic optimization.
 
 Before joining WPI, I earned an M.A. in Applied Mathematics from the University of Southern California and a B.S. in Applied Statistics from Hubei University of Technology.
 
